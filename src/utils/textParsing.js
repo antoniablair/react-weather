@@ -1,8 +1,4 @@
-// TODO: Refactor
-
-export const joinArrayGrammatically = (arrayOfWords) => {
-  const arr = arrayOfWords;
-
+export const joinArrayGrammatically = (arr) => {
   let outStr = '';
 
   if (arr.length === 1) {
@@ -17,15 +13,12 @@ export const joinArrayGrammatically = (arrayOfWords) => {
 
 export const capitalizeWord = (word) => {
   const lower = word.toLowerCase();
-
   return lower.charAt(0).toUpperCase() + lower.substr(1);
 };
 
 export const initialCasePhrase = (phrase) => {
-  const nonInitialCased = phrase;
-
   let words = [];
-  const substrings = nonInitialCased.split(' ');
+  const substrings = phrase.split(' ');
 
   substrings.forEach(s => words.push(capitalizeWord(s)));
 

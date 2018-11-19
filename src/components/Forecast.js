@@ -2,24 +2,26 @@ import React from 'react';
 
 import { css, StyleSheet } from 'aphrodite';
 
+import { getWeatherConditionImage } from '../utils/conditionImages';
 import { joinArrayGrammatically, initialCasePhrase } from '../utils/textParsing';
 
 import Card from './Card';
 
 /**
- * Displays forecast results returned from weather API.
+ * Parses forecast results returned from weather API.
  **/
 
 export const styles = StyleSheet.create({
   forecastContainer: {
     fontSize: '24px',
-    marginTop: '20px',
+    marginTop: '50px',
     display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
   }
 });
 
-const parseForecastList = (data) => {
-  const weatherData = data;
+const parseForecastList = (weatherData) => {
   let forecasts = [];
 
   weatherData.forEach(forecast => {
@@ -29,25 +31,28 @@ const parseForecastList = (data) => {
   return forecasts;
 };
 
-const generateForecastPrediction = (data, locale) => {
-  const forecasts = data;
-  const city = locale;
-
+const createForecastSentence = (forecasts) => {
   const forecastString = joinArrayGrammatically(forecasts);
 
-  return `The forecast today for ${initialCasePhrase(city)} is: ${forecastString}.`;
+  return `The forecast today is: ${forecastString}.`;
 };
 
-const Forecast = (props) => {
-  const { weatherData, city } = props;
-
+const Forecast = ({ weatherData, city }) => {
   if (weatherData) {
     const forecasts = parseForecastList(weatherData['weather']);
-    const forecastPrediction = generateForecastPrediction(forecasts, city);
+    const forecastSentence = createForecastSentence(forecasts);
+    const temp = weatherData.main.temp;
+    const link = `https://openweathermap.org/find?q=${city.replace(' ', '+')}`;
+    const image = getWeatherConditionImage(parseInt(weatherData.weather[0].id));
 
     return (
       <div className={css(styles.forecastContainer)}>
-        <Card text={forecastPrediction} />
+        <Card city={initialCasePhrase(city)}
+              image={image}
+              link={link}
+              temp={temp}
+              text={forecastSentence}
+        />
       </div>
     );
   } else {
