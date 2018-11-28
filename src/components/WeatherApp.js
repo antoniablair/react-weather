@@ -11,8 +11,6 @@ import { StyleSheet } from 'aphrodite';
 import colors from '../common/colors';
 import config from '../config';
 
-import weatherData from '../weatherData';
-
 export const styles = StyleSheet.create({
   weatherContainer: {
     backgroundColor: colors.paper,
@@ -94,11 +92,6 @@ class WeatherApp extends Component {
     const urlBase = 'http://api.openweathermap.org/data/2.5/weather';
     const url = `${urlBase}?q=${this.state.formText}&appid=${weatherApiKey}&units=imperial`;
 
-    // this.setState({
-    //   weatherData,
-    //   city: this.state.formText,
-    // });
-
     const response = await fetch(url);
 
     if (response.status === 200) {
@@ -113,18 +106,6 @@ class WeatherApp extends Component {
         error: response.statusText
       });
     }
-
-    // fetch(url)
-    //   .then(response => {
-    //     if (response.status === 200) {
-    //       response.json().then(weatherData => {
-    //         this.setState({ weatherData, city: this.state.formText });
-    //       });
-    //     } else {
-    //       this.setState({ error: response.statusText })
-    //     }
-    //   })
-    //   .catch(error => this.setState({ error }));
   }
 
   onChangeCity(event) {
