@@ -18,9 +18,6 @@ export const styles = StyleSheet.create({
     fontFamily: 'Source Sans Pro',
     padding: '10px 10px',
   },
-  margin15: {
-    margin: '15px 15px',
-  },
   button: {
     backgroundColor: colors.gold,
     width: '150px',
@@ -62,6 +59,7 @@ export const styles = StyleSheet.create({
   },
   instructions: {
     fontSize: '18px',
+    marginBottom: '50px',
   },
   forecast: {
     fontSize: '24px',
@@ -124,7 +122,7 @@ class WeatherApp extends Component {
           </h1>
           <Emoji label='peace' symbol='✌️' />
         </div>
-        <div className={css(styles.margin15)}>
+        <div>
           <p className={css(styles.instructions)}>Enter the name of your city to get today's forecast.</p>
           <form onSubmit={this.submitForm}>
             <div>
