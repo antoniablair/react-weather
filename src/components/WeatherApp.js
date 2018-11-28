@@ -85,9 +85,8 @@ class WeatherApp extends Component {
     event.preventDefault();
 
     const weatherApiKey = (process.env.REACT_APP_WEATHER_API);
-    console.log(weatherApiKey);
 
-    const urlBase = 'http://api.openweathermap.org/data/2.5/weather';
+    const urlBase = 'https://api.openweathermap.org/data/2.5/weather';
     const url = `${urlBase}?q=${this.state.formText}&appid=${weatherApiKey}&units=imperial`;
 
     const response = await fetch(url);
