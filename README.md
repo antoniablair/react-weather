@@ -15,6 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Add notification features
 - Add weather icons
 - Add tests and type checking
+- Better error handling
 
 
 -----
