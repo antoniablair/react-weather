@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 
 const Action = ({ link }) => (
   <div className={css(styles.action, styles.bottomElement)}>
-    <a className={css(styles.button)} href={link} target='_blank'>
+    <a className={css(styles.button)} href={link} target='_blank' rel='noopener noreferrer'>
       <span className={css(styles.buttonText)}>Learn More</span>
     </a>
   </div>
@@ -89,7 +89,7 @@ const Action = ({ link }) => (
 const Card = ({ city, image, link, temp, text }) => (
   <div className={css(styles.card, styles.sideShadows)}>
     <div className={css(styles.imageContainer, styles.sideShadows)}>
-      <img src={require(`../images/${image}`)} className={css(styles.image)} />
+      <img src={require(`../images/${image}`)} className={css(styles.image)} alt='Forecast'/>
     </div>
     <div className={css(styles.content)}>
       <h3>{ city }</h3>
