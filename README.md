@@ -7,6 +7,12 @@ Alternatively, use the file weatherData.js to load some faux data.
 
 <img src="https://github.com/antoniablair/react-weather/blob/master/src/images/screenshot.png" width="500">
 
+### Todos:
+- Guess user's location based on browser or last time they used the site
+- Save result in localStorage for a certain amount of time
+- Add notification features
+- Add tests and type checking
+
 
 -----
 
