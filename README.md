@@ -1,8 +1,8 @@
 ## Weather app
 
-A basic React app that can fetch the weather from Open Weather API. [Check it out on Heroku.](https://protected-hamlet-67701.herokuapp.com/)
+A very basic React app that can fetch the weather from Open Weather API. [Check it out on Heroku.](https://protected-hamlet-67701.herokuapp.com/)
 
-In order to run the app locally, you will need to add an environment variable REACT_APP_WEATHER_API_KEY.
+In order to run the app locally, you will need to add an environment variable `REACT_APP_WEATHER_API`.
 Alternatively, use the file weatherData.js to load some faux data.
 
 <img src="https://github.com/antoniablair/react-weather/blob/master/src/images/screenshot.png" width="500">
