@@ -7,6 +7,8 @@ Alternatively, use the file weatherData.js to load some faux data.
 
 <img src="https://github.com/antoniablair/react-weather/blob/master/src/images/screenshot.png" width="500">
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses Aphrodite for inline styles. 
+
 ### Todos:
 - Guess user's location based on browser or last time they used the site
 - Save result in localStorage for a certain amount of time
@@ -15,8 +17,6 @@ Alternatively, use the file weatherData.js to load some faux data.
 
 
 -----
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
