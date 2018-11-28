@@ -1,11 +1,13 @@
 ## Weather app
 
-A basic React app that can fetch the weather.
+A basic React app that can fetch the weather from Open Weather API.
+
+In order to run the app, you will need to add a config.js file in src/ that 
+contains a weatherApiKey, which is imported into [WeatherApp here](https://github.com/antoniablair/react-weather/blob/ddb861598e9212137f806e4ba5ede1db954354e8/src/components/WeatherApp.js#L88).)
+Alternatively, use the file weatherData.js to load some faux data.
 
 <img src="https://github.com/antoniablair/react-weather/blob/master/src/images/screenshot.png" width="500">
 
-Note: This app uses Open Weather API. In order to run the app, you will need to add a config.js file in src/ that 
-contains a weatherApiKey. Alternatively, use the file weatherData.js to load some faux data.
 
 -----
 
