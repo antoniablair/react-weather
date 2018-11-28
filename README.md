@@ -13,6 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Guess user's location based on browser or last time they used the site
 - Save result in localStorage for a certain amount of time
 - Add notification features
+- Add weather icons
 - Add tests and type checking
 
 
