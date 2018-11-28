@@ -9,7 +9,6 @@ import Forecast from './Forecast';
 import { StyleSheet } from 'aphrodite';
 
 import colors from '../common/colors';
-import config from '../config';
 
 export const styles = StyleSheet.create({
   weatherContainer: {
