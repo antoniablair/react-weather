@@ -1,3 +1,9 @@
+## Weather app
+
+A basic React app that can fetch the weather.
+
+<img src="https://github.com/antoniablair/react-weather/blob/master/screenshot.png" width="500">
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
