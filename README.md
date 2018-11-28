@@ -4,6 +4,11 @@ A basic React app that can fetch the weather.
 
 <img src="https://github.com/antoniablair/react-weather/blob/master/src/images/screenshot.png" width="500">
 
+Note: In order to run the file, you will need to add a config.js file in src/ that contains 
+a weatherApiKey. Alternatively, use the file weatherData.js to load some faux data.
+
+-----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
